@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    ports:
+      - '5435:5432'
+    volumes: 
+      - /home/jefferson/projects/api_filmes/postgres-data:/var/lib/postgresql/data
+      - /home/jefferson/projects/api_filmes/create-db.sql:/docker-entrypoint-initdb.d/create_database.sql
