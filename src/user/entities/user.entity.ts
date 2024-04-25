@@ -13,4 +13,11 @@ export class User {
 
   @Column()
   name: string;
+
+  constructor(user?: Partial<User>) {
+    this.id = user?.id;
+    this.email = user?.email;
+    this.password = user?.password;
+    this.name = user?.name;
+  }
 }
