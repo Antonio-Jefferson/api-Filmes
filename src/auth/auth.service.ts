@@ -19,7 +19,7 @@ export class AuthService {
     console.log('Valor da chave JWT:', process.env.JWT_SECRET);
 
     const payload: UserPayload = {
-      sub: user.id.toString(),
+      sub: user.id,
       email: user.email,
       name: user.name,
     };
