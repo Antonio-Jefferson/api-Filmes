@@ -7,6 +7,7 @@ import { UserService } from '../user/user.service';
 import { UserPayload } from './models/UserPayload';
 import { UserToken } from './models/UserToken';
 import { CreateUserDto } from 'src/user/dto/create-user.dto';
+import config from '../config/config';
 
 @Injectable()
 export class AuthService {
@@ -16,7 +17,7 @@ export class AuthService {
   ) {}
 
   async login(user: User): Promise<UserToken> {
-    console.log('Valor da chave JWT:', process.env.JWT_SECRET);
+    console.log('Valor da chave JWT:', config.jwtSecret);
 
     const payload: UserPayload = {
       sub: user.id,
@@ -27,7 +28,7 @@ export class AuthService {
     console.log('athut server');
     console.log({ payload });
     return {
-      access_token: this.jwtService.sign(payload),
+      access_token: this.jwtService.sign(payload, { secret: config.jwtSecret }),
     };
   }
 

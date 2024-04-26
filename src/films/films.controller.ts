@@ -11,7 +11,6 @@ import { FilmsService } from './films.service';
 import { Film } from './entities/film.entity';
 import { CreateFilmDto } from './dtos/create-film.dto';
 import { UpdateFilmDto } from './dtos/update-film.dto';
-import { IsPublic } from 'src/auth/decorators/is-public.decorator';
 
 @Controller('films')
 export class FilmsController {
@@ -22,7 +21,6 @@ export class FilmsController {
     return this.filmsService.create(createFilmDto);
   }
 
-  @IsPublic()
   @Get()
   async findAll(): Promise<Film[]> {
     return this.filmsService.findAll();
