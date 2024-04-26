@@ -1,14 +1,5 @@
 ## README
 
-1. **Instruções de Uso**
-    - [ ] Forneça instruções detalhadas sobre como configurar e executar o projeto.
-
-2. **Informações sobre Ferramentas**
-    - [ ] Liste as ferramentas utilizadas no projeto e seu nível de experiência com cada uma.
-
-3. **Links Úteis**
-    - [ ] Inclua links para a documentação, repositório do GitHub e a aplicação em produção, se aplicável.
-
 ### Instruções de Uso
 
 Para rodar este projeto, siga estas etapas:
@@ -37,7 +28,7 @@ Para rodar este projeto, siga estas etapas:
         ```bash
         npm run start:prod
         ```
-    - O projeto estará disponível em `http://localhost:3000`.
+    - O projeto estará disponível em `http://localhost:3001`.
 
 ### Informações sobre Ferramentas
 
@@ -53,7 +44,7 @@ As ferramentas utilizadas neste projeto incluem:
 
 ### Links Úteis
 
-- **Documentação**: [Inserir link para a documentação do projeto, se disponível]
+- **Documentação**: [[Swagger](http://localhost:3001/api#/)]
 - **Repositório do GitHub**: [Inserir link para o repositório do GitHub]
 - **Aplicação em Produção**: [Inserir link para a aplicação em produção, se aplicável]
 

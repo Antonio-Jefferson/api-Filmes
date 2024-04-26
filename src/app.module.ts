@@ -6,6 +6,7 @@ import { AuthModule } from './auth/auth.module';
 import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
 import { APP_GUARD } from '@nestjs/core';
 import { FilmsModule } from './films/films.module';
+import { RedisService } from './config/redis';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { FilmsModule } from './films/films.module';
   ],
   controllers: [],
   providers: [
+    RedisService,
     {
       provide: APP_GUARD,
       useClass: JwtAuthGuard,
